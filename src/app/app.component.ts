@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'spotify-app';
+  searchMusic() {
+    console.log("spotify music app")
+  }
 }

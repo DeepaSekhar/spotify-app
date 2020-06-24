@@ -9,6 +9,8 @@
       name="search"
       class="form-control"
       placeholder="search your Music"
+      [(ngModel)]="search"
+      (keyup)="searchMusic()"
     />
   </div>
 </form>
