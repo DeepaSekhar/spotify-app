@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from '../services/service';
+import { Observable } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  // oAuthres$: Observable<any[]>
+  spotifyoAuthUrl: string;
 
-  constructor() { }
+  constructor(private spotifyService: SpotifyService,
+    private route: ActivatedRoute,
+    private router: Router) {
+
+  }
+
 
   ngOnInit(): void {
+    // this.spotifyService.getAuth().subscribe(
+    //   res => console.log("ngOnit", res)
+    // )
+    this.spotifyoAuthUrl = this.spotifyService.oAuthUrl;
   }
 
 }
