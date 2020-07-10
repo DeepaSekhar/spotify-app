@@ -10,6 +10,7 @@ const appRoutes: Routes = [
 
   { path: 'login', component: LoginComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'search/token', component: SearchComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ]
 

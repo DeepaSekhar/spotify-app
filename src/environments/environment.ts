@@ -5,5 +5,6 @@
 export const environment = {
   production: false,
   clientId: '912a79b35603492291b382ebd0733970',
-  clientSecret: '0338d98a37d9471ea017fd10c0275e8f'
+  clientSecret: '0338d98a37d9471ea017fd10c0275e8f',
+  redirectUri: 'http://localhost:4200/search'
 }
