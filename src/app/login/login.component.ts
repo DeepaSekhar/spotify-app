@@ -18,11 +18,8 @@ export class LoginComponent implements OnInit {
 
   }
 
-
+  //authorisation
   ngOnInit(): void {
-    // this.spotifyService.getAuth().subscribe(
-    //   res => console.log("ngOnit", res)
-    // )
     this.spotifyoAuthUrl = this.spotifyService.oAuthUrl;
   }
 
