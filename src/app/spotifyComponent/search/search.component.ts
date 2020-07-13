@@ -21,11 +21,15 @@ export class SearchComponent implements OnInit {
     //acessing oAuth token
     this.oAuthToken = this.route.snapshot.fragment
     console.log("snapshot", this.oAuthToken);
+    this.spotifyservice.getAuthToken(this.oAuthToken);
+
   }
   searchMusic() {
-    this.spotifyservice.searchMusic(this.searchStr, 'artist').subscribe(res => {
-      console.log();
-    })
-    // console.log(this.searchStr)
+    console.log("the function been called")
+    this.spotifyservice.searchByArtist(this.searchStr).subscribe()
+
+
   }
+
+
 }
