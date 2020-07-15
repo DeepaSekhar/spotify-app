@@ -10,8 +10,19 @@
       class="form-control"
       placeholder="search your Music"
       [(ngModel)]="searchStr"
-      (keyup)="searchMusic()"
+      (keyup)="searchMusicByArtist()"
     />
   </div>
 </form>
+<div *ngIf="searchResponse$ | async">
+  <div *ngFor="let res of searchResponse$ | async">
+    <h2>{{ res.name }}</h2>
+    <div>
+      <strong>Genere</strong>
+      <span *ngFor="let genere of res.genres">
+        <h4>{{ genere }}</h4>
+      </span>
+    </div>
+  </div>
+</div>
 {{ searchForm.value | json }}

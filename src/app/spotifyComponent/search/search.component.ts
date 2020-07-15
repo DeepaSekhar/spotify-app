@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/service'
-import { Artist } from '../../models/Artist'
-import { observable } from 'rxjs';
+import { Artists } from '../../models/Artist'
+import { Item } from '../../models/Items'
+import { Observable } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'app-search',
@@ -10,8 +11,9 @@ import { Router, ActivatedRoute } from '@angular/router'
 })
 export class SearchComponent implements OnInit {
   searchStr: string;
-  response: Artist[]
+  searchResponse$: Observable<Item[]>
   oAuthToken: string;
+
 
   constructor(private spotifyservice: SpotifyService,
     private route: ActivatedRoute,
@@ -20,13 +22,17 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     //acessing oAuth token
     this.oAuthToken = this.route.snapshot.fragment
+    //oAth token contain the word "acess token=" so slice that word from token using replace
+    let oAuthSlice = this.oAuthToken.replace("access_token=", "");
+    console.log("slice", oAuthSlice)
+
     console.log("snapshot", this.oAuthToken);
-    this.spotifyservice.getAuthToken(this.oAuthToken);
+    this.spotifyservice.getAuthToken(oAuthSlice);
 
   }
-  searchMusic() {
+  searchMusicByArtist() {
     console.log("the function been called")
-    this.spotifyservice.searchByArtist(this.searchStr).subscribe()
+    this.searchResponse$ = this.spotifyservice.searchByArtist(this.searchStr)
 
 
   }
