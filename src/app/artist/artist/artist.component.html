@@ -1,0 +1,11 @@
+<!-- <form #ArtistForm="ngForm" onload="serarchArtistsAlbmById()">
+</form> -->
+<h1>Album page</h1>
+<div *ngIf="artistsAlbums$ | async as albums">
+  <div *ngFor="let album of albums">
+    <h3>{{ album.name }}</h3>
+    <!-- <div *ngFor="let img of album.images"> -->
+    <img src="{{ album.images[0].url }}" />
+    <!-- </div> -->
+  </div>
+</div>

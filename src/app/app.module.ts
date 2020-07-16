@@ -6,11 +6,14 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { SearchComponent } from './spotifyComponent/search/search.component';
 import { LoginComponent } from './login/login.component';
+import { ArtistComponent } from './artist/artist/artist.component';
+
 const appRoutes: Routes = [
 
   { path: 'login', component: LoginComponent },
   { path: 'search', component: SearchComponent },
   { path: 'search/token', component: SearchComponent },
+  { path: 'artist/:id', component: ArtistComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ]
 
@@ -19,7 +22,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SearchComponent,
-    LoginComponent
+    LoginComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

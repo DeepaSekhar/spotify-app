@@ -6,6 +6,8 @@ import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Artists } from '../models/Artist'
 import { Item } from '../models/Items'
+import { ArtistsAlbums } from '../models/ArtistsAlbums'
+import { AlbumItem } from '../models/AlbumItem'
 
 import { SearchByResponse } from '../models/SearchByResponse'
 
@@ -16,6 +18,7 @@ import { SearchByResponse } from '../models/SearchByResponse'
 
 export class SpotifyService {
     searchUrl: string;
+    searchArtistsAlbum: string;
     authorise: string;
     oAuthToken: string;
     //oAuth url for authorise and login 
@@ -24,13 +27,13 @@ export class SpotifyService {
     }
     getAuthToken(oAuthToken: string) {
         this.oAuthToken = oAuthToken;
-        console.log("oAuthToken", this.oAuthToken);
+        // console.log("oAuthToken", this.oAuthToken);
 
     }
     //search music(search component)
 
     searchByArtist(searchString: string): Observable<Item[]> {
-        console.log("service been called", searchString);
+        // console.log("service been called", searchString);
         let headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${this.oAuthToken}`,
@@ -40,9 +43,10 @@ export class SpotifyService {
         console.log("headers", headers);
         // this.searchUrl = 'https://api.spotify.com/v1/search&offset=0&limit=5'
         this.searchUrl = `/api/search?q=${searchString}&type=artist&offset=0&limit=5`
-        console.log("search-url", this.searchUrl);
+        // console.log("search-url", this.searchUrl);
 
         return this.http.get<SearchByResponse>(this.searchUrl, { headers: headers })
+
             .pipe(
                 tap(result => console.log("result from service", result.artists.items)
                 )
@@ -52,7 +56,17 @@ export class SpotifyService {
 
 
     }
-    serarchArtistById(id: string) {
-        console.log("id from service", id);
+    serarchArtistsAlbmById(id: string): Observable<AlbumItem[]> {
+        let headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.oAuthToken}`,
+        })
+
+        this.searchArtistsAlbum = `https://api.spotify.com/v1/artists/${id}/albums`
+        console.log("seachArtistAlbum", this.searchArtistsAlbum);
+        return this.http.get<ArtistsAlbums>(this.searchArtistsAlbum, { headers: headers })
+            .pipe(
+                tap(res => console.log("result from searchArtist from Album", res)),
+                map(res => res.items))
     }
 }

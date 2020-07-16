@@ -3,6 +3,7 @@ import { AlbumArtist } from '../models/AlbumArtist'
 import { ExternalUrls } from '../models/ExternalUrls'
 import { Image } from "../models/Image"
 import { ReleaseDatePrecision } from "../models/ReleaseDatePrecision"
+
 export interface AlbumItem {
     album_group: AlbumGroup;
     album_type: AlbumGroup;
