@@ -4,10 +4,9 @@ import { map, tap } from 'rxjs/operators'
 import { environment } from '../../environments/environment';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-
 import { Artists } from '../models/Artist'
 import { Item } from '../models/Items'
+
 import { SearchByResponse } from '../models/SearchByResponse'
 
 @Injectable({
@@ -16,13 +15,7 @@ import { SearchByResponse } from '../models/SearchByResponse'
 )
 
 export class SpotifyService {
-    // private clientId: string = environment.clientId;
-    // private clientSecret: string = environment.clientSecret;
-    // private redirectUri: string = environment.redirectUri;
     searchUrl: string;
-    // artists$: Artists[];
-    // items$: Item[];
-    // searchByRespose$: SearchByResponse
     authorise: string;
     oAuthToken: string;
     //oAuth url for authorise and login 
@@ -58,5 +51,8 @@ export class SpotifyService {
 
 
 
+    }
+    serarchArtistById(id: string) {
+        console.log("id from service", id);
     }
 }
