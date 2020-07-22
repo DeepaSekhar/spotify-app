@@ -18,7 +18,7 @@ Spotify accound required for this app.
 
 ## Reference from Spotify documentation
 
-- Web API reference .[Spotify-web-API](https://developer.spotify.com/ documentation/web-api/).
+- Web API reference .[spotify web API](https://developer.spotify.com/documentation/web-api/).
 
 - Spotify Authentication .[Authentication](https://developer.spotify.com/documentation/general/guides/authorization-guide/).
 
