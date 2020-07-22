@@ -11,7 +11,7 @@
     <div *ngFor="let album of albums">
       <i class="fas fa-music"></i>
       <h3>{{ album.name }}</h3>
-      <a href="{{ album.preview_url }}"><button>preview song</button></a>
+      <!-- <a href="{{ album.preview_url }}"><button>preview song</button></a> -->
       <audio controls class="audio">
         <source src="{{ album.preview_url }}" type="audio/ogg" />
 
