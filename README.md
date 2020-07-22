@@ -6,22 +6,35 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone Repoitory
+Install modules with npm install
+Run app with ng serve
 
-## Build
+## Note
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Spotify accound required for this app.
 
-## Running unit tests
+## Reference
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Used Spotify API to fetch data [Spotify API](https://developer.spotify.com/documentation/web-api/)
+Spotify documentation used for the reference[Spotify documentation](http://developer.spotify.com/documentation).
+Spotify Authentication[Authentication](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
 
-## Running end-to-end tests
+## Features
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Get authentication from spotify account
+Search an artist's by name
+displayed all the album's of an artist
+displayed all the songs in an album
+preview related music
 
-## Further help
+## Tools used
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+postman to check API response
+Quicktype to generates models and helper code for quickly and safely reading JSON
+
+## Work in progress
+
+working with styling using Sass
