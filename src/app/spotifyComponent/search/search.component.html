@@ -16,8 +16,9 @@
     </form>
   </div>
   <!-- ********************************* -->
-  <div *ngIf="searchResponse$ | async">
-    <div *ngFor="let res of searchResponse$ | async">
+
+  <div class="search-card" *ngIf="searchResponse$ | async">
+    <div class="search-card-item" *ngFor="let res of searchResponse$ | async">
       <h2>
         <a routerLink="/artist/{{ res.id }}">{{ res.name }}</a>
       </h2>

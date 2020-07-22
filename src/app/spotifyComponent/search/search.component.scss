@@ -1,15 +1,23 @@
 .search-heading {
-  color: green;
-}
-.search-container {
-  display: flex;
-
-  flex-direction: column;
-  align-items: center;
+  color: rgb(2, 20, 2);
+  text-shadow: 2px 2px 4px #4b4545;
 }
 .text-box {
   border: 2px solid black;
   height: 30%;
   width: 80%;
   padding: 8px;
+}
+.container {
+  border: 1px solid black;
+}
+.search-card-item {
+  width: 80%;
+  background-color: rgb(6, 121, 6);
+  box-shadow: 5px 10px solid rgb(23, 68, 2);
+
+  border: 3px solid rgb(23, 68, 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
