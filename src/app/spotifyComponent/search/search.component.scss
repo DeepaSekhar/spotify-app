@@ -1,14 +1,9 @@
-body {
-  height: 100%;
-}
-
 .search-heading {
   color: green;
 }
-.container {
-  background-color: cadetblue;
-  margin-top: 5%;
+.search-container {
   display: flex;
+
   flex-direction: column;
   align-items: center;
 }
