@@ -1,9 +1,14 @@
-.container {
-  display: flex;
+html {
+  width: 100%;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("/src/assets/image/img.jpeg");
+}
+.login-container {
   border: 1px solid black;
   width: 20%;
-  height: 30px;
-  background-color: green;
-  margin-left: 40%;
-  margin-top: 200px;
+  height: 30%;
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/service'
-import { Artists } from '../../models/Artist'
 import { Item } from '../../models/Items'
 import { Observable } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router'

@@ -1,11 +1,19 @@
-<!-- <form #ArtistForm="ngForm" onload="serarchArtistsAlbmById()">
-</form> -->
-<h1>Album page</h1>
-<div *ngIf="artistsAlbums$ | async as albums">
-  <div *ngFor="let album of albums">
-    <h3>{{ album.name }}</h3>
-    <!-- <div *ngFor="let img of album.images"> -->
-    <img src="{{ album.images[0].url }}" />
-    <!-- </div> -->
+<div class="container">
+  <h1>Album's</h1>
+  <button (click)="goBack()">Previus page</button>
+  <div class="album" *ngIf="artistsAlbums$ | async as albums">
+    <div *ngFor="let album of albums">
+      <div class="album-details">
+        <div>
+          <h3>
+            <a routerLink="/album/{{ album.id }}">{{ album.name }}</a>
+          </h3>
+
+          <div class="image-container">
+            <img src="{{ album.images[0].url }}" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -6,6 +6,8 @@ import { Item } from '../../models/Items'
 import { ArtistsAlbums } from '../../models/ArtistsAlbums'
 import { Observable } from 'rxjs';
 import { AlbumItem } from 'src/app/models/AlbumItem';
+import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -18,7 +20,8 @@ export class ArtistComponent implements OnInit {
   artistsAlbums$: Observable<AlbumItem[]>
   constructor(private spotifyService: SpotifyService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private location: Location) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(parameterMap => {
@@ -28,5 +31,7 @@ export class ArtistComponent implements OnInit {
       this.artistsAlbums$ = this.spotifyService.serarchArtistsAlbmById(this.id);
     })
   }
-
+  goBack(): void {
+    this.location.back();
+  }
 }

@@ -1,6 +1,6 @@
 import { ExternalUrls } from './ExternalUrls'
 import { Followers } from './Followers'
-import { Image } from './Images'
+import { Image } from './Image'
 
 
 export interface Item {

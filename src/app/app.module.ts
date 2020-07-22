@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './spotifyComponent/search/search.component';
 import { LoginComponent } from './login/login.component';
 import { ArtistComponent } from './artist/artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 const appRoutes: Routes = [
 
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'search/token', component: SearchComponent },
   { path: 'artist/:id', component: ArtistComponent },
+  { path: 'album/:id', component: AlbumComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ]
 
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     SearchComponent,
     LoginComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

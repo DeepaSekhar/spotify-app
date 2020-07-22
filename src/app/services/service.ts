@@ -1,4 +1,4 @@
-import { Injectable, ɵConsole } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators'
 import { environment } from '../../environments/environment';
@@ -8,7 +8,8 @@ import { Artists } from '../models/Artist'
 import { Item } from '../models/Items'
 import { ArtistsAlbums } from '../models/ArtistsAlbums'
 import { AlbumItem } from '../models/AlbumItem'
-
+import { AlbumDetails } from '../models/album/AlbumDetails'
+import { AlbumDetailItem } from '../models/album/AlbumDetail-Item'
 import { SearchByResponse } from '../models/SearchByResponse'
 
 @Injectable({
@@ -19,6 +20,8 @@ import { SearchByResponse } from '../models/SearchByResponse'
 export class SpotifyService {
     searchUrl: string;
     searchArtistsAlbum: string;
+    searchArtisOfAlbums: string
+    searchAlbumOfArtist: string;
     authorise: string;
     oAuthToken: string;
     //oAuth url for authorise and login 
@@ -56,17 +59,50 @@ export class SpotifyService {
 
 
     }
-    serarchArtistsAlbmById(id: string): Observable<AlbumItem[]> {
+    serarchArtistsAlbmById(artistId: string): Observable<AlbumItem[]> {
         let headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${this.oAuthToken}`,
         })
 
-        this.searchArtistsAlbum = `https://api.spotify.com/v1/artists/${id}/albums`
+        this.searchArtistsAlbum = `https://api.spotify.com/v1/artists/${artistId}/albums`
         console.log("seachArtistAlbum", this.searchArtistsAlbum);
         return this.http.get<ArtistsAlbums>(this.searchArtistsAlbum, { headers: headers })
             .pipe(
                 tap(res => console.log("result from searchArtist from Album", res)),
                 map(res => res.items))
+    }
+    //album component
+    //function to get the artist to view 
+
+    searchAlbumsArtistById(albumId: string): Observable<AlbumDetails> {
+
+        let headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.oAuthToken}`,
+        })
+        this.searchArtisOfAlbums = `https://api.spotify.com/v1/albums/${albumId}`
+        console.log("seach Album", this.searchArtisOfAlbums);
+        return this.http.get<AlbumDetails>(this.searchArtisOfAlbums, { headers: headers })
+            .pipe(
+                tap(res => console.log("result from detailed album", res))
+            )
+    }
+
+    //function to return album of a paticular artist   
+
+    searchAlbumsOfArtist(albumId: string): Observable<AlbumDetailItem[]> {
+
+        let headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.oAuthToken}`,
+        })
+        this.searchAlbumOfArtist = `https://api.spotify.com/v1/albums/${albumId}`
+        console.log("search Album", this.searchAlbumOfArtist);
+        return this.http.get<AlbumDetails>(this.searchAlbumOfArtist, { headers: headers })
+            .pipe(
+                tap(res => console.log("****result *****", res.tracks.items)),
+                map(res => res.tracks.items))
+
     }
 }

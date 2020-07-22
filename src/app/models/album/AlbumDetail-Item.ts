@@ -1,7 +1,8 @@
-import { ArtistDetails } from '../../models/album-details/ArtistDetails'
+import { ArtistDetails } from '../album/ArtistDetails'
 import { ExternalUrls } from '../ExternalUrls'
-import { ItemType } from '../album-details/ItemType'
+import { ItemType } from '../../models/album/ItemType'
 export interface AlbumDetailItem {
+
     artists: ArtistDetails[];
     available_markets: string[];
     disc_number: number;

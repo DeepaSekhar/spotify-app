@@ -1,4 +1,5 @@
-import { AlbumDetailItem } from '../album-details/AlbumDetailItem'
+import { AlbumDetailItem } from '../../models/album/AlbumDetail-Item'
+
 export interface Tracks {
     href: string;
     items: AlbumDetailItem[];
