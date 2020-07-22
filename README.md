@@ -16,11 +16,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Spotify accound required for this app.
 
-## Reference in Spotify
+## Reference from Spotify documentation
 
-- Web API reference [Spotify web API](https://developer.spotify.com/ documentation/web-api/).
+- Web API reference .[Spotify-web-API](https://developer.spotify.com/ documentation/web-api/).
 
-- Spotify Authentication[Authentication](https://developer.spotify.com/documentation/general/guides/authorization-guide/).
+- Spotify Authentication .[Authentication](https://developer.spotify.com/documentation/general/guides/authorization-guide/).
 
 ## Features
 
