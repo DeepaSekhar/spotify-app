@@ -1,6 +1,42 @@
+@import "flexbox";
+@import "variables";
+
+.login-btn-container {
+  position: absolute;
+  width: 161px;
+  border: border;
+  border-radius: 20px;
+  top: 91%;
+  left: 30%;
+  background-color: black;
+  @include respond-to("small") {
+    top: 57%;
+    left: 38%;
+  }
+  @include respond-to("medium") {
+    width: 198px;
+  }
+  @include respond-to("large") {
+    width: 213px;
+  }
+  @include respond-to("xlarge") {
+    width: 270px;
+  }
+}
+
 .login-btn {
   padding: 5px;
-  .a {
-    font-size: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  @include respond-to("medium") {
+    padding: 9px;
+    font-size: 18px;
+  }
+  @include respond-to("large") {
+    font-size: 20px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 23px;
+    padding: 12px;
   }
 }
