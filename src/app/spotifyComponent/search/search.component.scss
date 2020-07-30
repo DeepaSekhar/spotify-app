@@ -14,18 +14,17 @@
 .text-box {
   border: 2px solid black;
   height: 30%;
-  width: 80%;
+  width: 100%;
   padding: 8px;
+  border-radius: 17px;
+  border: 1px solid blue;
 }
 .search-card {
   display: flex;
-
+  margin-top: 5px;
   flex-direction: column;
-
   width: 80%;
   height: 81%;
-
-  // border: 2px solid blue;
   overflow: scroll;
 }
 .card {
@@ -37,6 +36,10 @@
   background-color: rgb(68, 68, 139);
   border-radius: 40px;
 }
-// .container {
-//   border: 1px solid black;
-// }
+.card-img {
+  width: 130px;
+}
+.text {
+  color: white;
+  text-decoration: none;
+}
