@@ -16,18 +16,22 @@
         />
       </div>
     </form>
+    <!-- <div class=" search-svg-box">
+      <img class="search-svg" src="assets/image/picture.svg" />
+    </div> -->
 
     <!-- ********************************* -->
 
     <div class="search-card " *ngIf="searchResponse$ | async">
       <div class="card" *ngFor="let res of searchResponse$ | async">
-        <h2>
-          <a class="text" routerLink="/artist/{{ res.id }}">{{ res.name }}</a>
-        </h2>
         <div class="card-img">
           <img class="img" src="{{ res.images[0].url }}" />
         </div>
-        <h5 class="text">{{ res.type }}</h5>
+        <h4 class="search-text-box">
+          <a class="text" routerLink="/artist/{{ res.id }}">{{ res.name }}</a>
+        </h4>
+
+        <!-- <h5 class="text">{{ res.type }}</h5> -->
         <!-- <div>
           <strong>Genere</strong>
           <span *ngFor="let genere of res.genres">
