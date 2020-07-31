@@ -1,14 +1,10 @@
-.container {
+@import "../../../styles/styles.scss";
+.artist-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-}
-.image-container {
-  width: 30%;
-}
-img {
   width: 100%;
+  height: 100%;
 }
 .album-details {
   display: flex;
