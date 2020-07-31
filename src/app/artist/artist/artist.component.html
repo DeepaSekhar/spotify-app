@@ -1,20 +1,27 @@
 <div class="container">
   <div class="search-container">
-    <h1 class="search-heading"><i class="fas fa-user-music">Album</i></h1>
-    <button (click)="goBack()">Previus page</button>
+    <div class="text-container">
+      <button class="back-button" (click)="goBack()">
+        <i class="fas fa-step-backward"></i>Back
+      </button>
+      <h1 class="artist-heading">
+        <i class="fas fa-user-music "></i>Future's Album
+      </h1>
+    </div>
+
     <div class="search-card" *ngIf="artistsAlbums$ | async as albums">
-      <div class="card" *ngFor="let album of albums">
+      <div class="artist-card" *ngFor="let album of albums">
         <!-- <div class="album-details"> -->
         <!-- <div> -->
+
+        <div class="artist-card-img">
+          <img class="artist-img" src="{{ album.images[0].url }}" />
+        </div>
         <h3>
           <a class="text" routerLink="/album/{{ album.id }}">{{
             album.name
           }}</a>
         </h3>
-
-        <div class="card-img">
-          <img class="img" src="{{ album.images[0].url }}" />
-        </div>
       </div>
     </div>
   </div>
