@@ -4,57 +4,26 @@
 // *******login component*******
 .login-btn {
   display: flex;
-  padding: 9px;
-  width: 70%;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  width: 65%;
   border-radius: 22px;
-  margin-bottom: 46px;
+  margin-bottom: 128px;
   background-color: $primaryColor;
 }
 .btn {
   width: 70%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
   color: white;
   text-decoration: none;
   font-family: "Bree Serif", serif;
 }
 
-// .login-btn-container {
-//   position: absolute;
-//   width: 161px;
-//   border: border;
-//   border-radius: 20px;
-//   top: 91%;
-//   left: 30%;
-//   background-color: black;
-//   @include respond-to("small") {
-//     top: 57%;
-//     left: 38%;
-//   }
-//   @include respond-to("medium") {
-//     width: 198px;
-//   }
-//   @include respond-to("large") {
-//     width: 213px;
-//   }
-//   @include respond-to("xlarge") {
-//     width: 270px;
-//   }
-// }
+.back-button {
+  color: white;
+  background-color: black;
+}
 
-// .login-btn {
-//   padding: 5px;
-//   font-size: 15px;
-//   font-weight: bold;
-//   @include respond-to("medium") {
-//     padding: 9px;
-//     font-size: 18px;
-//   }
-//   @include respond-to("large") {
-//     font-size: 20px;
-//   }
-//   @include respond-to("xlarge") {
-//     font-size: 23px;
-//     padding: 12px;
-//   }
-// }
+// ************search component**************

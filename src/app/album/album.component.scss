@@ -1,9 +1,70 @@
-.audio {
-  background-color: chartreuse;
+.album-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  background-color: rgb(2, 2, 19);
 }
-.fas {
-  color: rgb(128, 33, 33);
+
+.album-img-box {
+  width: 50%;
+  box-shadow: 0 2px 4px #888888;
+}
+.album-img {
+  width: 100%;
+  border-radius: 10px;
+}
+.album-card {
+  overflow: scroll;
+}
+.audio {
+  background-color: black;
 }
 .btn-login {
   width: 20px;
+}
+.album-container-box {
+  margin-top: 25px;
+  display: flex;
+}
+.album-box {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.album-text {
+  color: white;
+  margin-top: 3px;
+}
+.url-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preview-btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.previous {
+  margin-left: 0;
+}
+.btn-box {
+  width: 100%;
+}
+.album-audio {
+  display: flex;
+  flex-direction: column;
+}
+.albm-description {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

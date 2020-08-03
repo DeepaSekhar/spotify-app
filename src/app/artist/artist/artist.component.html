@@ -1,9 +1,11 @@
 <div class="container">
   <div class="search-container">
     <div class="text-container">
-      <button class="back-button" (click)="goBack()">
-        <i class="fas fa-step-backward"></i>Back
-      </button>
+      <div class="btn-box">
+        <button class="back-button" (click)="goBack()">
+          <i class="fas fa-step-backward"></i>Back
+        </button>
+      </div>
       <h1 class="artist-heading">
         <i class="fas fa-user-music "></i>Future's Album
       </h1>
@@ -17,11 +19,11 @@
         <div class="artist-card-img">
           <img class="artist-img" src="{{ album.images[0].url }}" />
         </div>
-        <h3>
+        <h4>
           <a class="text" routerLink="/album/{{ album.id }}">{{
             album.name
           }}</a>
-        </h3>
+        </h4>
       </div>
     </div>
   </div>

@@ -1,21 +1,23 @@
 <div class="container">
   <div class="search-container">
-    <h1 class="search-heading">
-      <i class="fas fa-search">Search Your Artist</i>
-    </h1>
-    <form #searchForm="ngForm">
-      <div class="form-group">
-        <input
-          type="text"
-          id="search"
-          name="search"
-          class="form-control text-box"
-          placeholder="search your Music"
-          [(ngModel)]="searchStr"
-          (keyup)="searchMusicByArtist()"
-        />
-      </div>
-    </form>
+    <header class="header-text">
+      <h1 class="search-heading">
+        <i class="fas fa-search">Search</i>
+      </h1>
+      <form #searchForm="ngForm">
+        <div class=" search-box form-group">
+          <input
+            type="text"
+            id="search"
+            name="search"
+            class="form-control text-box"
+            placeholder="search your Music"
+            [(ngModel)]="searchStr"
+            (keyup)="searchMusicByArtist()"
+          />
+        </div>
+      </form>
+    </header>
     <!-- <div class=" search-svg-box">
       <img class="search-svg" src="assets/image/picture.svg" />
     </div> -->
