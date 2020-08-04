@@ -1,12 +1,20 @@
+// *******search component*******
 .text {
   color: white;
   text-decoration: none;
-  margin: 0 0 0 10px;
+  // margin-top: 5px;
+  // margin: 0 0 0 10px;
   // font-size: 14px;
 }
 .search-heading {
   color: white;
   font-size: 15px;
+  @include respond-to("small") {
+    font-size: 29px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 39px;
+  }
 }
 .text-box {
   margin-left: 2px;
@@ -15,14 +23,51 @@
   width: 100%;
   padding: 8px;
   border-radius: 5px;
-  // border: 1px solid blue;
   background-color: rgb(201, 194, 194);
+  @include respond-to("small") {
+    padding: 14px;
+    margin-left: 10px;
+  }
+  @include respond-to("xlarge") {
+    padding: 22px;
+  }
 }
 .header-text {
   margin-top: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid white;
+  // border: 1px solid white;
   width: 100%;
+}
+.search-text {
+  font-size: 17px;
+  @include respond-to("small") {
+    font-size: 21px;
+  }
+  @include respond-to("medium") {
+    font-size: 23px;
+  }
+  @include respond-to("large") {
+    font-size: 26px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 33px;
+  }
+}
+
+::-moz-placeholder {
+  color: red;
+  font-size: 12pt;
+}
+// **************album component************
+.album-description {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  @include respond-to("small") {
+    width: 25%;
+  }
 }

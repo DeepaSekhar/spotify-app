@@ -11,4 +11,28 @@
 // *************search component*********
 .card-img {
   width: 88px;
+  @include respond-to("small") {
+    width: 162px;
+  }
+  @include respond-to("medium") {
+    width: 182px;
+  }
+  @include respond-to("large") {
+    width: 192px;
+  }
+  @include respond-to("xlarge") {
+    width: 274px;
+  }
+}
+// **********album component***********
+.album-img-box {
+  width: 163px;
+  box-shadow: 0 2px 4px #888888;
+  @include respond-to("small") {
+    width: 50%;
+  }
+}
+.album-img {
+  width: 100%;
+  border-radius: 10px;
 }
