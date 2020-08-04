@@ -18,7 +18,7 @@
 }
 .search-heading {
   color: white;
-  font-size: 15px;
+  font-size: 21px;
   @include respond-to("small") {
     font-size: 29px;
   }
@@ -69,22 +69,25 @@
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: red;
+  color: $placeholderColor;
   font-size: 12pt;
+  @include respond-to("xlarge") {
+    font-size: 17pt;
+  }
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: red;
+  color: $placeholderColor;
   font-size: 12pt;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: red;
+  color: $placeholderColor;
   font-size: 12pt;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: red;
+  color: $placeholderColor;
   font-size: 12pt;
 }
 

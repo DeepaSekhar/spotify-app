@@ -66,7 +66,7 @@
 
 // *************search component*********
 .card-img {
-  width: 88px;
+  width: 90px;
   @include respond-to("small") {
     width: 162px;
   }
@@ -80,6 +80,40 @@
     width: 274px;
   }
 }
+
+.search-svg-box {
+  width: 100%;
+  height: 467px;
+  margin-top: 335px;
+  @include respond-to("small") {
+    width: 56%;
+
+    margin-top: 199px;
+  }
+  @include respond-to("medium") {
+    width: 44%;
+  }
+
+  margin-top: 190px;
+  @include respond-to("large") {
+    width: 44%;
+  }
+  @include respond-to("xlarge") {
+    width: 47%;
+  }
+}
+.search-svg {
+  width: 100%;
+  @include respond-to("small") {
+  }
+  @include respond-to("medium") {
+  }
+  @include respond-to("large") {
+  }
+  @include respond-to("xlarge") {
+  }
+}
+
 // **********album component***********
 .album-img-box {
   width: 163px;
