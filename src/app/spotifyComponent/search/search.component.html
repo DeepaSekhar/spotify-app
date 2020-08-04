@@ -18,9 +18,10 @@
         </div>
       </form>
     </header>
-    <!-- <div class=" search-svg-box">
+
+    <div class=" search-svg-box" *ngIf="!(searchResponse$ | async)">
       <img class="search-svg" src="assets/image/picture.svg" />
-    </div> -->
+    </div>
 
     <!-- ********************************* -->
 

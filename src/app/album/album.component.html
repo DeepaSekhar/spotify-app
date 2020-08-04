@@ -14,7 +14,7 @@
         <div class="album-box">
           <span class="text album-text">Album</span>
           <span class="text album-name">{{ artistalbums.name }}</span>
-          <span class="text album-type">{{ artistalbums.album_type }}</span>
+          <span class="text album-type">{{ artistalbums.release_date }}</span>
         </div>
       </div>
       <div class="album-url-card" *ngIf="albumsOfArist$ | async as albums">

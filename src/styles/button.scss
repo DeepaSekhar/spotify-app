@@ -11,6 +11,11 @@
   border-radius: 22px;
   margin-bottom: 128px;
   background-color: $primaryColor;
+  @include respond-to("small") {
+    margin-bottom: 0px;
+    margin-top: 15px;
+    width: 51%;
+  }
 }
 .btn {
   width: 70%;
@@ -19,6 +24,9 @@
   color: white;
   text-decoration: none;
   font-family: "Bree Serif", serif;
+  @include respond-to("small") {
+    font-size: 15px;
+  }
 }
 
 .back-button {

@@ -1,3 +1,7 @@
+.logo-text {
+  letter-spacing: 3px;
+}
+
 // *******search component*******
 .text {
   color: white;
@@ -55,11 +59,29 @@
     font-size: 33px;
   }
 }
+// placeholder
 
-::-moz-placeholder {
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: red;
   font-size: 12pt;
 }
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: red;
+  font-size: 12pt;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: red;
+  font-size: 12pt;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: red;
+  font-size: 12pt;
+}
+
 // **************album component************
 .album-description {
   display: flex;
