@@ -16,6 +16,17 @@
     margin-top: 15px;
     width: 51%;
   }
+  @include respond-to("medium") {
+    margin-top: 63px;
+    width: 43%;
+  }
+  @include respond-to("large") {
+    width: 37%;
+    margin-top: 0;
+  }
+  @include respond-to("large") {
+    width: 36%;
+  }
 }
 .btn {
   width: 70%;
@@ -26,6 +37,17 @@
   font-family: "Bree Serif", serif;
   @include respond-to("small") {
     font-size: 15px;
+  }
+  @include respond-to("medium") {
+    font-size: 17px;
+  }
+
+  @include respond-to("large") {
+    padding: 7px;
+  }
+  @include respond-to("xlarge") {
+    padding: 15px;
+    font-size: 24px;
   }
 }
 

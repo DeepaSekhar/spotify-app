@@ -23,6 +23,9 @@
     display: flex;
     box-shadow: 0 2px 4px #888888;
   }
+  @include respond-to("medium") {
+    width: 83%;
+  }
 }
 
 // ******search component********

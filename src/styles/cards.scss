@@ -25,6 +25,9 @@
   @include respond-to("small") {
     width: 50%;
   }
+  @include respond-to("large") {
+    flex-direction: row;
+  }
 }
 
 // **********search component******

@@ -1,5 +1,11 @@
 .logo-text {
   letter-spacing: 3px;
+  @include respond-to("small") {
+    letter-spacing: 13px;
+  }
+  @include respond-to("xlarge") {
+    letter-spacing: 22px;
+  }
 }
 
 // *******search component*******

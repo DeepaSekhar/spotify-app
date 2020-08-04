@@ -7,6 +7,10 @@
   width: 250px;
   height: 250px;
   overflow: hidden;
+  @include respond-to("xlarge") {
+    height: 315px;
+    width: 315px;
+  }
 }
 .img {
   width: 100%;
@@ -25,6 +29,10 @@
   @include respond-to("small") {
     height: 32px;
   }
+  @include respond-to("xlarge") {
+    height: 54px;
+    width: 92%;
+  }
 }
 
 .svg-box {
@@ -32,6 +40,14 @@
   width: 92%;
   @include respond-to("small") {
     height: 85%;
+    width: 64%;
+  }
+  @include respond-to("medium") {
+    height: 77%;
+  }
+  @include respond-to("large") {
+    width: 60%;
+    height: 100%;
   }
 }
 .svg {
@@ -39,6 +55,12 @@
   height: 346px;
   @include respond-to("small") {
     height: 336px;
+  }
+  @include respond-to("medium") {
+    height: 308px;
+  }
+  @include respond-to("xlarge") {
+    height: 462px;
   }
 }
 
