@@ -11,13 +11,12 @@
       </h1>
     </div>
 
-    <div class="search-card" *ngIf="artistsAlbums$ | async as albums">
-      <div class="artist-card" *ngFor="let album of albums">
+    <div class="card-container" *ngIf="artistsAlbums$ | async as albums">
+      <div class="card" *ngFor="let album of albums">
         <!-- <div class="album-details"> -->
         <!-- <div> -->
-
-        <div class="artist-card-img">
-          <img class="artist-img" src="{{ album.images[0].url }}" />
+        <div class="card-img">
+          <img class="img" src="{{ album.images[0].url }}" />
         </div>
         <h4>
           <a class="text" routerLink="/album/{{ album.id }}">{{

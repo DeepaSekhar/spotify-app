@@ -4,8 +4,8 @@
       <h1 class="search-heading">
         <i class="fas fa-search">Search</i>
       </h1>
-      <form #searchForm="ngForm">
-        <div class=" search-box form-group">
+      <form class="search-box" #searchForm="ngForm">
+        <div class="  form-group">
           <input
             type="text"
             id="search"
@@ -24,13 +24,15 @@
 
     <!-- ********************************* -->
 
-    <div class="search-card " *ngIf="searchResponse$ | async">
+    <div class="card-container" *ngIf="searchResponse$ | async">
       <div class="card" *ngFor="let res of searchResponse$ | async">
         <div class="card-img">
           <img class="img" src="{{ res.images[0].url }}" />
         </div>
         <h4 class="search-text-box">
-          <a class="text" routerLink="/artist/{{ res.id }}">{{ res.name }}</a>
+          <a class="text search-text" routerLink="/artist/{{ res.id }}">{{
+            res.name
+          }}</a>
         </h4>
 
         <!-- <h5 class="text">{{ res.type }}</h5> -->
