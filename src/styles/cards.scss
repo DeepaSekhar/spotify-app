@@ -3,16 +3,23 @@
 
 .login-logo-card {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 2px 4px #888888;
-  background-color: $primaryColor;
+  background-color: $imagecardColor;
+
   @include respond-to("small") {
     display: flex;
     width: 50%;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+}
+.logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .login-btn-card {
   display: flex;
@@ -25,6 +32,15 @@
   @include respond-to("small") {
     width: 50%;
   }
+}
+.btn-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #020213;
   @include respond-to("large") {
     flex-direction: row;
   }
@@ -59,8 +75,30 @@
     width: 22%;
   }
 }
+// *****artist component**********
+.album-details {
+  display: flex;
+  flex-direction: column;
+}
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+.card-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 // **********album component*****
+.album-card {
+  overflow: scroll;
+}
+
 .album-url-card {
   display: flex;
   width: 95%;
@@ -76,7 +114,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 5px;
-  background-color: #9b9ed6a1;
+  background-color: #05054af2;
   padding: 0;
   align-items: flex-start;
   box-shadow: 0 2px 4px #888888;
@@ -104,5 +142,8 @@
   @include respond-to("large") {
     align-items: flex-start;
     margin-left: 17px;
+  }
+  @include respond-to("large") {
+    width: 71%;
   }
 }

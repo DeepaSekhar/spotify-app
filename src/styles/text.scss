@@ -1,5 +1,6 @@
 .logo-text {
   letter-spacing: 3px;
+  margin-bottom: 0;
   @include respond-to("small") {
     letter-spacing: 13px;
   }
@@ -34,12 +35,14 @@
   padding: 8px;
   border-radius: 5px;
   background-color: rgb(201, 194, 194);
+  font-size: 15px;
   @include respond-to("small") {
     padding: 14px;
     margin-left: 10px;
   }
   @include respond-to("xlarge") {
     padding: 22px;
+    font-size: 20px;
   }
 }
 .header-text {
@@ -90,6 +93,14 @@
   color: $placeholderColor;
   font-size: 12pt;
 }
+// **************artistcomponent************
+.artist-heading {
+  width: 100%;
+  color: white;
+  margin-left: 14px;
+  text-decoration: underline;
+  text-decoration-color: rgb(175, 172, 172);
+}
 
 // **************album component************
 .album-description {
@@ -119,7 +130,7 @@
   }
 }
 .text-name {
-  color: black;
+  color: white;
   margin-left: 10px;
   font-size: 14px;
   @include respond-to("medium") {
