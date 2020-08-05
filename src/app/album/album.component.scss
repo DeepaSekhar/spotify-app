@@ -18,16 +18,11 @@
 .btn-login {
   width: 20px;
 }
-.album-text {
-  margin-top: 3px;
-  font-weight: normal;
-}
 .album-type {
   font-weight: normal;
 }
 .preview-btn {
-  background-color: black;
-  color: white;
+  // color: white;
   border: none;
 }
 .previous-btn {
@@ -41,7 +36,5 @@
 .album-audio {
   display: flex;
   flex-direction: column;
-}
-.album-width {
-  width: 100%;
+  background-color: black;
 }

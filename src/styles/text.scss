@@ -104,23 +104,35 @@
   }
 }
 .album-name {
+  margin-left: 10px;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 15px;
   margin: 29px 0 25px 0;
   @include respond-to("small") {
-    font-size: 22px;
+    font-size: 37px;
   }
   @include respond-to("large") {
-    font-size: 43px;
+    font-size: 47px;
   }
   @include respond-to("xlarge") {
     font-size: 71px;
   }
 }
 .text-name {
+  color: black;
   margin-left: 10px;
   font-size: 14px;
+  @include respond-to("medium") {
+    font-size: 19px;
+  }
   @include respond-to("large") {
     font-size: 20px;
+  }
+}
+.album-text {
+  margin-top: 3px;
+  font-weight: normal;
+  font-size: 17px;
+  @include respond-to("large") {
   }
 }
