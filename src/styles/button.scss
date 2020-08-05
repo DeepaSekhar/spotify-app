@@ -59,6 +59,7 @@
   padding: 2px;
   margin-left: 14px;
   font-size: 19px;
+  margin-top: 9px;
   @include respond-to("xlarge") {
     padding: 7px;
     font-size: 22px;
