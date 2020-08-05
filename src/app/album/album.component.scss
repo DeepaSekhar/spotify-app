@@ -18,24 +18,9 @@
 .btn-login {
   width: 20px;
 }
-.album-container-box {
-  margin-top: 25px;
-  display: flex;
-}
-.album-box {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
 .album-text {
   margin-top: 3px;
   font-weight: normal;
-}
-.album-name {
-  font-weight: bold;
-  margin: 29px 0 25px 0;
 }
 .album-type {
   font-weight: normal;
@@ -45,8 +30,10 @@
   color: white;
   border: none;
 }
-.previous {
+.previous-btn {
   margin-left: 0;
+  margin-left: 9px;
+  margin-top: 6px;
 }
 .btn-box {
   width: 100%;
@@ -54,9 +41,6 @@
 .album-audio {
   display: flex;
   flex-direction: column;
-}
-.text-name {
-  margin-left: 10px;
 }
 .album-width {
   width: 100%;

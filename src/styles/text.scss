@@ -98,7 +98,29 @@
   justify-content: flex-start;
   margin-top: 20px;
   margin-bottom: 10px;
+  margin-left: 15px;
   @include respond-to("small") {
-    width: 25%;
+    width: 50%;
+  }
+}
+.album-name {
+  font-weight: normal;
+  font-size: 10px;
+  margin: 29px 0 25px 0;
+  @include respond-to("small") {
+    font-size: 22px;
+  }
+  @include respond-to("large") {
+    font-size: 43px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 71px;
+  }
+}
+.text-name {
+  margin-left: 10px;
+  font-size: 14px;
+  @include respond-to("large") {
+    font-size: 20px;
   }
 }

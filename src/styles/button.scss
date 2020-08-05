@@ -51,9 +51,16 @@
   }
 }
 
+// ************search component**************
+// **************artist component********
 .back-button {
   color: white;
   background-color: black;
+  padding: 2px;
+  margin-left: 14px;
+  font-size: 19px;
+  @include respond-to("xlarge") {
+    padding: 7px;
+    font-size: 22px;
+  }
 }
-
-// ************search component**************

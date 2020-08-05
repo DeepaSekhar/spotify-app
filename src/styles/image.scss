@@ -117,9 +117,19 @@
 // **********album component***********
 .album-img-box {
   width: 163px;
+  margin-left: 9px;
   box-shadow: 0 2px 4px #888888;
   @include respond-to("small") {
-    width: 50%;
+    width: 39%;
+  }
+  @include respond-to("medium") {
+    width: 26%;
+  }
+  @include respond-to("large") {
+    width: 28%;
+  }
+  @include respond-to("xlarge") {
+    width: 27%;
   }
 }
 .album-img {

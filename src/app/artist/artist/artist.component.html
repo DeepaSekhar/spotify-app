@@ -6,11 +6,12 @@
           <i class="fas fa-step-backward"></i>Back
         </button>
       </div>
-      <h1 class="artist-heading">
-        <i class="fas fa-user-music "></i>Future's Album
-      </h1>
+      <div>
+        <h1 class="artist-heading">
+          <i class="fas fa-user-music "></i>Future's Album
+        </h1>
+      </div>
     </div>
-
     <div class="card-container" *ngIf="artistsAlbums$ | async as albums">
       <div class="card" *ngFor="let album of albums">
         <!-- <div class="album-details"> -->
