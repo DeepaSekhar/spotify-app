@@ -103,7 +103,8 @@
   }
 
   @include respond-to("large") {
-    width: 44%;
+    width: 59%;
+    height: 54%;
   }
   @include respond-to("xlarge") {
     width: 47%;
