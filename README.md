@@ -63,11 +63,12 @@ Spotify accound required for this app.sign up for a spotify accont(`https://www.
 ## approch
 
 1. I started with list down the features of this project
-2. I draw diagrams of how the different component needed to interact with each other and how the data would flow.
+2. I draw diagrams of how the different component needed to interact with each other and how the would flow.
 3. Next, Iread the spotify documentation,how the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
 4. I used postman to test API calls and, used quick type to impliment and refactor interface.
 5. Then ,I pass the data and displayed it using defferent end point.
 6. Used scss to style those pages.
+7. I used 4 screen sizes for the responsive design.( small: 767px, medium: 992px large: 1023px,xlarge: 1440px )
 
 ## Things struggled with this project
 
