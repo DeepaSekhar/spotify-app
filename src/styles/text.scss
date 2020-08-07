@@ -116,7 +116,7 @@
 }
 .album-name {
   margin-left: 10px;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 15px;
   margin: 29px 0 25px 0;
   @include respond-to("small") {
@@ -145,5 +145,19 @@
   font-weight: normal;
   font-size: 17px;
   @include respond-to("large") {
+    font-size: 33px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 40px;
+  }
+}
+.album-type {
+  font-weight: normal;
+  // font-size:20px;
+  @include respond-to("large") {
+    font-size: 24px;
+  }
+  @include respond-to("xlarge") {
+    font-size: 29px;
   }
 }
