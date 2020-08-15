@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-for-deploy": "ng build --prod --base-href \"https://DeepaSekhar.github.io/spotify-app/\"",
+    "deploy-to-gh-pages": "npx angular-cli-ghpages --dir=dist/spotify-app --branch=gh-pages",
+    "build-and-deploy": "npm run build-for-deploy && npm run deploy-to-gh-pages"
   },
   "private": true,
   "dependencies": {
