@@ -27,9 +27,11 @@ export class SpotifyService {
     //oAuth url for authorise and login 
     // readonly oAuthUrl = "https://accounts.spotify.com/authorize?client_id=912a79b35603492291b382ebd0733970&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fsearch%2F&scope=user-read-private%20user-read-email&response_type=token&state=123";
     // readonly oAuthUrl = "https://accounts.spotify.com/authorize?client_id=912a79b35603492291b382ebd0733970&redirect_uri=https%3A%2F%2Fdeepasekhar.github.io%2Fspotify-app%2Fsearch%2F&scope=user-read-private%20user-read-email&response_type=token&state=123";
-    readonly oAuthUrl = environment.oAuthUrl;
+    oAuthUrl = environment.oAuthUrl;
+
 
     constructor(private http: HttpClient) {
+        console.log("OAUTHURL", this.oAuthUrl);
     }
     getAuthToken(oAuthToken: string) {
         this.oAuthToken = oAuthToken;
@@ -48,7 +50,8 @@ export class SpotifyService {
         })
         console.log("headers", headers);
         // this.searchUrl = 'https://api.spotify.com/v1/search&offset=0&limit=5'
-        this.searchUrl = `/api/search?q=${searchString}&type=artist&offset=0&limit=5`
+        // this.searchUrl = `/api/search?q=${searchString}&type=artist&offset=0&limit=5`
+        this.searchUrl = `${environment.api}/search?q=${searchString}&type=artist&offset=0&limit=5`
         // console.log("search-url", this.searchUrl);
 
         return this.http.get<SearchByResponse>(this.searchUrl, { headers: headers })
