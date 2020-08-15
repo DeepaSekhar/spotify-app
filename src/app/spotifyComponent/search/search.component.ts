@@ -22,11 +22,13 @@ export class SearchComponent implements OnInit {
     //acessing oAuth token
     this.oAuthToken = this.route.snapshot.fragment
     //oAth token contain the word "acess token=" so slice that word from token using replace
-    let oAuthSlice = this.oAuthToken.replace("access_token=", "");
-    console.log("slice", oAuthSlice)
+    if (this.oAuthToken) {
+      let oAuthSlice = this.oAuthToken.replace("access_token=", "");
+      console.log("slice", oAuthSlice)
 
-    console.log("snapshot", this.oAuthToken);
-    this.spotifyservice.getAuthToken(oAuthSlice);
+      console.log("snapshot", this.oAuthToken);
+      this.spotifyservice.getAuthToken(oAuthSlice);
+    }
 
   }
   searchMusicByArtist() {
