@@ -73,7 +73,8 @@ Spotify accound required for this app.sign up for a spotify accont(`https://www.
 
 ## Deployment
 
-- used Github to hosted my project to the server.
+- Used Github to hosted my project to the server.
+- Added script for the deploy in package.json to make the deployment easy.
   [Live link](https://deepasekhar.github.io/spotify-app/).
 
 ## Things learned with this project
